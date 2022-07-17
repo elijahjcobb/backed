@@ -1,0 +1,8 @@
+.idea
+.code
+**/node_modules
+**/.turbo
+**/js
+**/dts
+**/.DS_Store
+**/.env.local

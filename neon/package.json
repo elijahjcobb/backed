@@ -1,0 +1,46 @@
+{
+  "name": "neon",
+  "version": "0.1.0",
+  "description": "A helpful logging package with types, formatting, stacks, and colors.",
+  "keywords": [
+    "log",
+    "console",
+    "color",
+    "error",
+    "type",
+    "message",
+    "stack"
+  ],
+  "main": "js/index",
+  "types": "dts/index",
+  "files": [
+    "js",
+    "dts"
+  ],
+  "scripts": {
+    "test": "jest .",
+    "prepublishOnly": "npm run build",
+    "compile": "tsc -p tsconfig.json",
+    "clean": "rm -rf js && rm -rf dts",
+    "start": "node js/index.js",
+    "build": "npm run compile",
+    "playground": "node js/playground"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elijahjcobb/neon.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Elijah Cobb <elijah@elijahcobb.com> (https://elijahcobb.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elijahjcobb/neon/issues"
+  },
+  "homepage": "https://github.com/elijahjcobb/neon#readme",
+  "dependencies": {
+    "colors": "latest"
+  },
+  "devDependencies": {}
+}
