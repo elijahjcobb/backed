@@ -1,11 +1,22 @@
-console.log("HI Playground!");
-
 import { TStandard } from "typr";
-import { Neon } from "neon";
+import { HHTTPServer, HEndpointBuilder, HEndpointGroup } from ".";
 
-const x = new Neon();
+console.log(TStandard.string.conforms("efwoij"));
+console.log(TStandard.string.conforms(4));
 
-x.enable();
-x.log("Hello, world!");
+const group = new HEndpointGroup();
 
-console.log(TStandard.string.conforms("Hello World"));
+group.add(
+  HEndpointBuilder.post("/")
+    .types({
+      name: TStandard.string,
+      age: TStandard.number,
+    })
+    .listener(async (req, res) => {
+      res.sendString("Hello, world!");
+    })
+);
+
+console.log("FOO");
+const server = new HHTTPServer(group, { debug: true });
+server.start(3000);

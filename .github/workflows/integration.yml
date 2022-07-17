@@ -1,5 +1,4 @@
-on:
-  push
+on: push
 
 jobs:
   test:
@@ -8,7 +7,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-            node-version: 16
+          node-version: 16
       - run: npm i
-      - run: npm run compile
       - run: npm run test

@@ -1,4 +1,4 @@
-import { Neon } from "../../neon/dts";
+import { Neon } from "neon";
 import { HRequest } from "./request";
 import { HResponse } from "./response";
 import { HError } from "./error";
